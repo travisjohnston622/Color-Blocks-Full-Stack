@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
-
+// styling
 import './App.css';
-
-// COMPONENTS
+//react-router
+import { HashRouter as Router, Route } from 'react-router-dom';
+// components
 import Header from '../Header/Header';
-
+// routes
+import swatches from '../pages/swatches/swatches';
+import colors from '../pages/colors/colors';
 class App extends Component {
     render() {
         return (
-            <div>
-                <Header />
+            <Router>
+                <div>
+                    <Header />
 
-                <div className="container">
-                    PAGE CONTENT
+                    <div className="container">
+                        <Route path="/" exact component={swatches} />
+                        <Route path="/colors" component={colors} />
+                    </div>
                 </div>
-            </div>
+            </Router>
         );
     }
 }
