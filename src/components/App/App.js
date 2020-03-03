@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 // styling
 import './App.css';
 //react-router
@@ -25,4 +26,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default connect()(App);

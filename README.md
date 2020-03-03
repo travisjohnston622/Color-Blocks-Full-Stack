@@ -53,15 +53,15 @@ Leverage `redux` and `redux-saga` for this exercise.
 
 ### Part 1: Pages
 
-- [ ] create two pages "**Swatches**" and "**Colors**"
+- [x] create two pages "**Swatches**" and "**Colors**"
     - **Swatches** should be the home URL route, `#/`
     - **Colors** page should be at a colors URL route, `#/colors`
-- [ ] Create navigation in the `Header.js` component
+- [x] Create navigation in the `Header.js` component
     - navigation should have two links one for **Swatches** and another for **Colors**
-- [ ] on the **Swatches** page show a heading that says, "Color Swatches"
-- [ ] on the **Colors** page show a heading that says, "Color Settings"
-- [ ] on each page display some text below the headings to be a placeholder of the page content
-- [ ] setup `redux` and `redux-saga`
+- [x] on the **Swatches** page show a heading that says, "Color Swatches"
+- [x] on the **Colors** page show a heading that says, "Color Settings"
+- [x] on each page display some text below the headings to be a placeholder of the page content
+- [x] setup `redux` and `redux-saga`
 
 
 ### Part 2: Swatches
