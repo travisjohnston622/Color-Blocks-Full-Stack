@@ -40,9 +40,10 @@ class Swatches extends Component {
             return (
                 <div key={index} className="body">
                     {swatch}
-                    <h4 className="label">{item.label}</h4>
-                    <div className="label">
-                        <button onClick={(event) => this.deleteSwatch(event, item.id)}>DELETE</button>
+                    {/* <h4 className="label">{item.label}</h4> */}
+                    <div>
+                        <h5 className="label">{item.label}<button className="del-btn" onClick={(event) => this.deleteSwatch(event, item.id)}>DELETE</button></h5>
+                        {/* <button onClick={(event) => this.deleteSwatch(event, item.id)}>DELETE</button> */}
                     </div>
                 </div>
             )
@@ -51,7 +52,7 @@ class Swatches extends Component {
             const el = `#${item.hex_code}`
             console.log(el)
             return (
-                <div key={index} className="body">
+                <div key={index} className="swatch-body">
                     <button
                         className="swatches-btn"
                         style={{ backgroundColor: el }}

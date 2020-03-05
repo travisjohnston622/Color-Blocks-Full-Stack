@@ -21,8 +21,34 @@ router.get('/', (req, res) => {
 });
 
 // Route to save new color blocks item
-
+router.post('/', (req, res) => {
+    const newSwatch = req.body;
+    console.log(newSwatch)
+    const queryString = `INSERT INTO "blocks" ("color_id")
+    VALUES ('${newSwatch.id}');`;
+    pool.query(queryString)
+        .then((response) => {
+            res.sendStatus(201);
+        })
+        .catch((err) => {
+            res.sendStatus(500);
+        })
+});
 
 // Route to delete a specific color block
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    const queryString = `DELETE FROM "blocks" WHERE id=$1;`;
+    pool.query(queryString, [id])
+        .then((result) => {
+            console.log('removed')
+            res.sendStatus(200);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.sendStatus(500);
+        })
+});
 
 module.exports = router;

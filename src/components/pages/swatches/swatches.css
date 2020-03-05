@@ -1,7 +1,7 @@
 .container{
-    /* grid-template-columns: repeat(3, 20px [col-start]) ; */
+    display: grid;
     width: 100%;
-    height: 10rem;
+    height: 40%;
     margin-left: 7px;
     margin-right: 7px;
     margin-top: 7px;
@@ -11,15 +11,22 @@
 
 .body{
     text-align: auto;
-    display: -moz-inline-grid;
-    width: 20%;
+    display: inline-table;
+    width: 100px;
+    height: 100px;
     margin-left: 15px;
     margin-right: 15px;
     padding: 5%;
 }
+.swatch-body{
+    display: grid;
+    text-align: justify;
+    width: 25%;
+    height: 25%;
+}
 
 .label{
-    text-align: center;
+    text-align: left;
 }
 
 .swatches-btn{
@@ -29,7 +36,11 @@
     margin-right: 3px;
     margin-top: 3px;
     margin-bottom: 3px;
+  
     /* float: left; */
+}
+.del-btn{
+    margin-left: 5px;
 }
 
 .red{
