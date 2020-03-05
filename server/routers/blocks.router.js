@@ -6,9 +6,9 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
-// BASE MODE - make a route to get all saved color blocks
+// Route to get all saved color blocks
 router.get('/', (req, res) => {
-    const queryString = `SELECT "blocks.id, "colors".label, "colors".hex_code
+    const queryString = `SELECT "blocks".id, "colors".label, "colors".hex_code
     FROM "blocks"
     JOIN "colors" ON "blocks".color_id = "colors".id;`;
     pool.query(queryString)
@@ -20,8 +20,9 @@ router.get('/', (req, res) => {
         })
 });
 
-// BASE MODE - make a route to save new color blocks item
+// Route to save new color blocks item
 
-// BASE MODE - make a route to delete a specific color block
+
+// Route to delete a specific color block
 
 module.exports = router;

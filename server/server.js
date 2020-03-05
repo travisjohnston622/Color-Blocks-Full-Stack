@@ -14,6 +14,7 @@ const colorsRouter = require('./routers/colors.router');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static('build'));
 
 //
 // ROUTER REGISTRATION

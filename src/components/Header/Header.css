@@ -19,13 +19,14 @@
     border-top: 1px solid #04080c;
     color: #0e1a29;
     text-shadow: none;
+    text-align: center;
 }
 
 .navList {
     display: block;
     padding: 0;
     margin: 0;
-    text-align: left;
+    text-align: center;
     /* removes default list styling from the browser */
     list-style: none;
     /* removes browser spacing on inline-block children */

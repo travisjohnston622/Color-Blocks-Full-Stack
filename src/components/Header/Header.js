@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
     render() {
         return (
-            <header className="appBar">
+            <header className="navBar">
                 <h1>Color Swatches</h1>
                 <nav>
                     <div>
