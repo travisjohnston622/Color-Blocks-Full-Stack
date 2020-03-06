@@ -1,4 +1,4 @@
-const getColorssReducer = (state = [], action) => {
+const getColorsReducer = (state = [], action) => {
     switch (action.type) {
         case 'SET_COLORS':
             return action.payload;
@@ -6,4 +6,4 @@ const getColorssReducer = (state = [], action) => {
             return state;
     }
 }
-export default getColorssReducer;
+export default getColorsReducer;

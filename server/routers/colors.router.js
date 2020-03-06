@@ -24,11 +24,10 @@ router.get('/', (req, res) => {
 // Route to save a new color option
 router.post('/', (req, res) => {
     const newColor = req.body;
-    console.log(newColor)
     const queryString = `INSERT INTO "colors" ("label", "hex_code")
     VALUES ('${newColor.label}', '${newColor.hex_code}');`;
     pool.query(queryString)
-        .then((res) => {
+        .then((response) => {
             res.sendStatus(201);
         })
         .catch((err) => {
@@ -43,7 +42,7 @@ router.put('/edit/:id', (req, res) => {
     const queryString = `UPDATE "colors" SET "label" = $2, "hex_code" = $3
     WHERE "id" = $1;`;
     pool.query(queryString, [colorLabel, colorHexCode])
-        .then((res) => {
+        .then((response) => {
             console.log('colors updated')
             res.sendStatus(200);
         })
@@ -59,7 +58,7 @@ router.delete('/:id', (req, res) => {
     console.log(id);
     const queryString = `DELETE FROM "colors" WHERE id=$1;`;
     pool.query(queryString, [id])
-        .then((res) => {
+        .then((result) => {
             console.log('removed')
             res.sendStatus(200);
         })
